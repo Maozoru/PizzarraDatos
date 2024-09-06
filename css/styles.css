@@ -1,6 +1,6 @@
 /* Variables de color y diseño */
 :root {
-    --background-image: url('fondo.jpg');
+    --background-image: url('../Imagenes/fondo.jpg');
     --text-color: #333;
     --title-color: #dfabff;
     --table-background: rgba(255, 255, 255, 0.85);
