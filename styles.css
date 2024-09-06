@@ -43,7 +43,7 @@ h1 {
     font-size: var(--font-size-title);
     letter-spacing: 1px;
     text-shadow: 
-        2px 2px 0 #000,   /* Sombras más gruesas */
+        2px 2px 0 #000,   
         -2px -2px 0 #000,
         2px -2px 0 #000,
         -2px 2px 0 #000,
