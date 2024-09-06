@@ -24,3 +24,6 @@ Características Principales:
    
 El código base de la funcionalidad de la pizarra fue adaptado de un tutorial disponible en Programador Web Valencia( https://programadorwebvalencia.com/dibujar-con-el-raton-en-HTML-y-Javascript/ ). Se han realizado modificaciones para agregar nuevas características, como el guardado de la imagen en formato PNG y la posibilidad de cambiar entre pincel y goma.
 
+![Vista previa de la pizarra](Imagenes/vp.png)
+
+
