@@ -1,0 +1,186 @@
+/* Variables de color y diseño */
+:root {
+    --background-image: url('fondo.jpg');
+    --text-color: #333;
+    --title-color: #dfabff;
+    --table-background: rgba(255, 255, 255, 0.85);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --header-background: #8e24aa;
+    --header-text-color: #fff;
+    --cell-background-odd: #f3e5f5;
+    --cell-background-even: #fff;
+    --cell-text-color: #512da8;
+    --hover-background: #d1c4e9;
+    --border-color: #e0e0e0;
+    --border-bottom-color: #ddd;
+    --canvas-background: #fff;
+    --button-margin: 5px;
+    --font-size-title: 2.5rem;
+    --font-size-header: 1.2rem;
+    --font-size-cell: 1rem;
+    --font-size-cell-small: 0.9rem;
+    --padding-title: 30px;
+    --padding-cell: 20px;
+    --padding-cell-small: 10px;
+}
+
+/* Estilo general con imagen de fondo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-image) no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    color: var(--title-color); /* Violeta oscuro */
+    text-align: center;
+    margin-bottom: var(--padding-title);
+    font-weight: bold;
+    font-size: var(--font-size-title);
+    letter-spacing: 1px;
+    text-shadow: 
+        2px 2px 0 #000,   /* Sombras más gruesas */
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 0px 0 #000,
+        -2px 0px 0 #000,
+        0px 2px 0 #000,
+        0px -2px 0 #000;
+}
+
+/* Estilos de la tabla */
+.tablaDatos {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--table-background); /* Fondo semitransparente */
+    box-shadow: 0 10px 20px var(--shadow-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Encabezados */
+th {
+    background-color: var(--header-background); /* Violeta vibrante */
+    color: var(--header-text-color);
+    text-transform: uppercase;
+    font-size: var(--font-size-header);
+    letter-spacing: 0.1rem;
+    padding: var(--padding-cell) 10px;
+    text-align: center;
+}
+
+/* Filas */
+td {
+    padding: var(--padding-cell);
+    font-size: var(--font-size-cell);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Estilo para celdas alternas */
+td:nth-child(odd) {
+    background-color: var(--cell-background-odd); /* Violeta claro */
+}
+
+td:first-child {
+    font-weight: bold;
+    color: var(--cell-text-color); /* Violeta medio */
+}
+
+/* Efecto hover */
+tr:hover {
+    background-color: var(--hover-background); /* Violeta suave */
+}
+
+/* Última fila sin borde */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Transición suave para el hover */
+tr {
+    transition: background-color 0.3s ease;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .tablaDatos {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: var(--font-size-cell-small);
+        padding: var(--padding-cell-small);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos personalizados para los controles */
+#brushSizeValue {
+    font-weight: bold;
+}
+
+/* Canvas y controles */
+canvas {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    background-color: var(--canvas-background); /* Fondo blanco */
+    border: 1px solid var(--border-bottom-color);
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Bordes redondeados para el lienzo */
+}
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+.controls input[type="range"] {
+    vertical-align: middle;
+}
+
+.controls button {
+    margin: var(--button-margin);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+    cursor: pointer;
+    font-size: var(--font-size-cell);
+}
+
+.controls button:hover {
+    background-color: var(--hover-background);
+}
+
+/* Estilos para los iconos de Font Awesome */
+.fa {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+
+/* Clase para bloquear el desplazamiento */
+.no-scroll {
+    overflow: hidden; /* Oculta el contenido fuera del viewport */
+}

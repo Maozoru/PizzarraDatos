@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos y dibujo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Pizzarra</h1>
+        <canvas id="pizarra"></canvas>
+        <div class="controls mt-4">
+            <button id="clearCanvas" class="btn btn-danger"><i class="fas fa-eraser"></i> Limpiar Lienzo</button>
+            <button id="useEraser" class="btn btn-secondary"><i class="fas fa-eraser"></i> Goma</button>
+            <button id="useBrush" class="btn btn-primary"><i class="fas fa-paint-brush"></i> Pincel</button>
+            <label for="colorPicker" class="ml-2">Color:</label>
+            <input type="color" id="colorPicker" value="#000000">
+            <label for="brushSize" class="ml-2">Tamaño:</label>
+            <input type="range" id="brushSize" min="1" max="50" value="10">
+            <span id="brushSizeValue">10</span>
+            <!-- Botón para guardar la imagen con ícono -->
+            <button id="saveImage" class="btn btn-primary">
+                <i class="fas fa-save"></i> Guardar Imagen
+            </button>
+        </div>
+        <h1>Datos del usuario</h1>
+        <div id="output" class="mt-4"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
